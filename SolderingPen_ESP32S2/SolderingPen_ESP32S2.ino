@@ -732,9 +732,9 @@ void MainScreen() {
       u8g2.print(fVin, 1);
       u8g2.print(F("V"));
       // draw current temperature 绘制当前温度
-      u8g2.setFont(u8g2_font_freedoomr25_tn);
+      u8g2.setFont(u8g2_font_fub25_tn);
       u8g2.setFontPosTop();
-      u8g2.setCursor(37, 18);
+      u8g2.setCursor(ShowTemp < 100 ? 34 : 37, 18);
       if (ShowTemp > 500)
         u8g2.print(F("000"));
       else
