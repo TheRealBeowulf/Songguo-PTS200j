@@ -741,7 +741,7 @@ void MainScreen() {
       if (ShowTemp > 500)
         u8g2.print(F("000"));
       else
-        u8g2.printf("%03d", ShowTemp);
+        u8g2.printf("%3d", ShowTemp);
     } else {
       // draw current temperature in big figures 用大数字绘制当前温度
       u8g2.setFont(u8g2_font_fub42_tn);
@@ -750,7 +750,7 @@ void MainScreen() {
       if (ShowTemp > 500)
         u8g2.print(F("000"));
       else
-        u8g2.printf("%03d", ShowTemp);
+        u8g2.printf("%3d", ShowTemp);
     }
   } while (u8g2.nextPage());
 }
