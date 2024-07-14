@@ -694,6 +694,10 @@ void MainScreen() {
     }
     else
       u8g2.drawUTF8(0, 0 + SCREEN_OFFSET, txt_set_temp[language]);
+    if (!MainScrType && Output == HEATER_OFF) {// Inversed logic for heater.
+      u8g2.setCursor(120, 50);
+      u8g2.print(F("*"));
+    }
     u8g2.setCursor(40, 0 + SCREEN_OFFSET);
     u8g2.setFont(u8g2_font_unifont_t_chinese3);
     if (inLockMode && !MainScrType)
@@ -740,6 +744,10 @@ void MainScreen() {
       u8g2.setCursor(83, 50);
       u8g2.print(fVin, 1);
       u8g2.print(F("V"));
+      if (Output == HEATER_OFF) {// Inversed logic.
+        u8g2.setCursor(120, 25);
+        u8g2.print(F("*"));
+      }
       // draw current temperature 绘制当前温度
       u8g2.setFont(u8g2_font_fub25_tn);
       u8g2.setFontPosTop();
