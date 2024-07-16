@@ -424,8 +424,10 @@ void SLEEPCheck() {
     } else if ((!inOffMode) && (time2off > 0) &&
                ((goneSeconds / 60) >= time2off)) {
       inOffMode = true;
-      u8g2.setPowerSave(1);
       beep();
+    } else if ((inOffMode) && ((goneSeconds / 60) >= time2off) &&
+               (CurrentTemp <= 40)) {
+      u8g2.setPowerSave(1);
     }
   }
 }
