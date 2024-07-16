@@ -604,7 +604,7 @@ void Thermostat() {
   if (inOffMode || inLockMode)
     Setpoint = 0;
   else if (inSleepMode)
-    Setpoint = SleepTemp;
+    Setpoint = constrain(SleepTemp, 0, SetTemp);
   else if (inBoostMode) {
     Setpoint = constrain(SetTemp + BoostTemp, 0, 450);
   } else
