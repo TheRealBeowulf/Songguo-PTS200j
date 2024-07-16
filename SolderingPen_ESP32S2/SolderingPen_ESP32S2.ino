@@ -349,6 +349,7 @@ void ROTARYCheck() {
         ;
       delay(10);
       if ((millis() - buttonmillis) >= 500) {
+        inBoostMode = false;  // stop boost mode 停止升温模式
         SetupScreen();
       } else {
         if (inLockMode) {
@@ -368,6 +369,7 @@ void ROTARYCheck() {
               handleMoved = true;
             }
           } else {  // double click
+            inBoostMode = false;  // stop boost mode 停止升温模式
             inOffMode = true;
           }
         }
