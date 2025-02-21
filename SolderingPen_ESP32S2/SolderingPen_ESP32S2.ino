@@ -1,6 +1,9 @@
 // Set board to esp32 by expressif 2.0.17 as lcd libraries 
 // depreciated until code is migrated.
 
+// Go to tools -> USB CDC on boot -> Enabled
+// Compilation will fail otherwise
+
 //
 #include "config.h"
 
