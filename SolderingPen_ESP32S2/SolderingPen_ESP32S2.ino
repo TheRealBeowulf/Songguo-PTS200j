@@ -4,7 +4,10 @@
 // Go to tools -> USB CDC on boot -> Enabled
 // Compilation will fail otherwise
 
-//
+// Go to tools -> Upload Mode -> Internal USB
+// UART not compatible with the iron
+
+
 #include "config.h"
 
 //
