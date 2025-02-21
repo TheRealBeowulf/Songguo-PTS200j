@@ -1,3 +1,6 @@
+// Set board to esp32 by expressif 2.0.17 as lcd libraries 
+// depreciated until code is migrated.
+
 //
 #include "config.h"
 
