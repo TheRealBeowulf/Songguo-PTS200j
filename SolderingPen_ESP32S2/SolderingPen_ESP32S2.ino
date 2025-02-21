@@ -7,6 +7,21 @@
 // Go to tools -> Upload Mode -> Internal USB
 // UART not compatible with the iron
 
+// Need the following Libraries, all except the required PIDV1 (included as zip) are 
+// currently available in the library manager
+// Button2
+// U8G2
+// ESP32AnalogRead
+// SparkFun_LIS2DH12
+// QC3Control
+
+// Library locations on web
+// Put here so easier to find than searching through project
+// https://github.com/olikraus/u8g2
+// http://librarymanager/All#ESP32AnalogRead
+// http://librarymanager/All#SparkFun_LIS2DH12
+// This one is included in the source https://github.com/wagiminator/ATmega-Soldering-Station/blob/master/software/libraries/Arduino-PID-Library.zip
+
 
 #include "config.h"
 
